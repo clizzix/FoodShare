@@ -53,7 +53,7 @@ const SearchFood = () => {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Nahrungsmittel suchen (z.B. Apfel, Nudeln)"
-                    className="flex-1 border p-3 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="flex-1 border p-3 rounded shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
                     type="submit"
