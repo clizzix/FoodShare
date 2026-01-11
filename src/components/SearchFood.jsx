@@ -45,14 +45,14 @@ const SearchFood = () => {
 
     return (
         <div className="p-6 max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-6">Nährwertsuche</h1>
+            <h1 className="text-3xl font-bold mb-6">Food Database</h1>
 
             <form onSubmit={handleSearch} className="flex gap-2 mb-8">
                 <input
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Nahrungsmittel suchen (z.B. Apfel, Nudeln)"
+                    placeholder="Search for ingredients(i.e. Banana or Noodles)..."
                     className="flex-1 border p-3 rounded shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <button
@@ -60,7 +60,7 @@ const SearchFood = () => {
                     disabled={loading}
                     className="bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-hover disabled:opacity-50 cursor-pointer"
                 >
-                    {loading ? 'Laden...' : 'Suchen'}
+                    {loading ? 'Loading' : 'Search'}
                 </button>
             </form>
 
