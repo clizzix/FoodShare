@@ -1,6 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/fsLogoCut.png';
+import {
+    MdOutlineHome,
+    MdOutlineSearch,
+    MdOutlineRestaurantMenu,
+} from 'react-icons/md';
 
 const Navbar = () => {
     return (
@@ -13,17 +18,17 @@ const Navbar = () => {
                 />
                 <p className="font-bold text-2xl">FoodShare</p>
             </div>
-            <ul className="flex gap-2 pr-4 text-l font-bold">
+            <ul className="flex gap-2 pr-4 text-xl font-bold">
                 <li>
                     <NavLink
                         to="/"
                         className={({ isActive }) =>
                             isActive
-                                ? 'bg-hover text-accent rounded-md p-4 shadow-md'
-                                : 'bg-primary text-white rounded-md p-4 shadow-md'
+                                ? 'bg-hover text-accent rounded-md p-4 shadow-md flex items-center'
+                                : 'bg-primary text-white rounded-md p-4 shadow-md flex items-center'
                         }
                     >
-                        Home
+                        <MdOutlineHome />
                     </NavLink>
                 </li>
                 <li>
@@ -31,11 +36,11 @@ const Navbar = () => {
                         to="/recipes"
                         className={({ isActive }) =>
                             isActive
-                                ? 'bg-hover text-accent rounded-md p-4 shadow-md'
-                                : 'bg-primary text-white rounded-md p-4 shadow-md'
+                                ? 'bg-hover text-accent rounded-md p-4 shadow-md flex items-center'
+                                : 'bg-primary text-white rounded-md p-4 shadow-md flex items-center'
                         }
                     >
-                        Recipes
+                        <MdOutlineRestaurantMenu />
                     </NavLink>
                 </li>
                 <li>
@@ -43,11 +48,11 @@ const Navbar = () => {
                         to="/search"
                         className={({ isActive }) =>
                             isActive
-                                ? 'bg-hover text-accent rounded-md p-4 shadow-md'
-                                : 'bg-primary text-white rounded-md p-4 shadow-md'
+                                ? 'bg-hover text-accent rounded-md p-4 shadow-md flex items-center'
+                                : 'bg-primary text-white rounded-md p-4 shadow-md flex items-center'
                         }
                     >
-                        Search
+                        <MdOutlineSearch />
                     </NavLink>
                 </li>
             </ul>
