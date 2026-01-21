@@ -1,12 +1,12 @@
 import React from 'react';
 import UserForm from '../components/UserForm';
 
-const Home = () => {
+const DashboardOverview = () => {
     return (
         <div className="flex flex-col justify-center items-center">
-            Welcome to my Web-App
+            <h2 className="mt-4 text-2xl font-semibold">Dashboard Overview</h2>
         </div>
     );
 };
 
-export default Home;
+export default DashboardOverview;

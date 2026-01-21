@@ -19,8 +19,8 @@ const SearchFood = () => {
             const foodList = Array.isArray(foods)
                 ? foods
                 : foods
-                ? [foods]
-                : [];
+                  ? [foods]
+                  : [];
             setResults(foodList);
             setSelectedFood(null);
         } catch (error) {

@@ -1,12 +1,12 @@
 import React from 'react';
 import UserForm from '../components/UserForm';
 
-const Home = () => {
+const DashboardSettings = () => {
     return (
         <div className="flex flex-col justify-center items-center">
-            Welcome to my Web-App
+            <UserForm />
         </div>
     );
 };
 
-export default Home;
+export default DashboardSettings;

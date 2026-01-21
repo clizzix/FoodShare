@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Recipes from './pages/Recipes';
 import Search from './pages/Search';
+import DashboardLayout from './layout/DashboardLayout';
+import DashboardOverview from './pages/DashboardOverview';
+import DashboardSettings from './pages/DashboardSettings';
 
 const App = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -49,6 +52,10 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/search" element={<Search />} />
+                <Route path="/dashboard" element={<DashboardLayout />}>
+                    <Route index element={<DashboardOverview />} />
+                    <Route path="settings" element={<DashboardSettings />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );

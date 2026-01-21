@@ -5,6 +5,7 @@ import {
     MdOutlineHome,
     MdOutlineSearch,
     MdOutlineRestaurantMenu,
+    MdOutlineDashboard,
 } from 'react-icons/md';
 
 const Navbar = () => {
@@ -19,6 +20,19 @@ const Navbar = () => {
                 <p className="font-bold text-2xl">FoodShare</p>
             </div>
             <ul className="flex gap-2 pr-4 text-xl font-bold">
+                <li>
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive }) =>
+                            isActive
+                                ? 'bg-hover text-accent rounded-md p-4 shadow-md flex items-center'
+                                : 'bg-primary text-white rounded-md p-4 shadow-md flex items-center'
+                        }
+                    >
+                        <MdOutlineDashboard />
+                    </NavLink>
+                </li>
+
                 <li>
                     <NavLink
                         to="/"
